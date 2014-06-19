@@ -1,4 +1,4 @@
-![Alt text](https://raw.github.com/lettier/webclient/master/screenshot.jpg)
+![Alt text](https://raw.github.com/lettier/webglbowling/master/screenshot.jpg)
 
 # WebGL Bowling Game
 
