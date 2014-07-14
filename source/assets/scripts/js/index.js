@@ -143,7 +143,7 @@ function set_system_settings_level( )
 	settings_div               = document.createElement( "div" );
 	settings_div.id            = "settings_div";
 	settings_div.className     = "settings_div";
-	settings_div.innerHTML     = "Settings Level:";
+	settings_div.innerHTML     = "Computer Power:";
 	document.body.appendChild( settings_div );
 	
 	settings_div.style.top        = ( ( window.innerHeight / 2 ) - ( settings_div.clientHeight / 2 ) ) + "px";
