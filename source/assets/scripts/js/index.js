@@ -3,7 +3,7 @@
  * 
  * http://www.lettier.com/
  * 
- * 3D WebGL Bowling Game
+ * 3D Bowling Game
  * 
  * Dependencies:
  * 
@@ -495,6 +495,8 @@ function initialize_2d( )
 		play = true;
 		
 		canvas.setAttribute( "style", "-webkit-filter: grayscale( 0.0 ) blur( 0px )" );
+		
+		canvas.className = "";
 		
 		round_div.style.visibility        = "visible";
 		score_div.style.visibility        = "visible";
@@ -1180,6 +1182,15 @@ function initialize_opening_sequence( )
 			
 		}, 100 );
 		
+		canvas.setAttribute( "style", "-webkit-filter: grayscale( 0.5 ) blur( 10px ) brightness( 0.05 )" );
+		
+		if ( canvas.style.length === 0 )
+		{
+			
+			canvas.className = "firefox_blur firefox_darken";
+			
+		}
+		
 		return;
 		
 	}
@@ -1193,6 +1204,13 @@ function initialize_opening_sequence( )
 	var s            = { y : bowling_pin_view.position.y, z: bowling_pin_view.position.z, l: bowling_pin_view.look_at.y, b: 0.05 };
 	var f            = { y : throwing_view.position.y, z: throwing_view.position.z, l: throwing_view.look_at.y, b: 1.0 };
 	opening_sequence = new TWEEN.Tween( s ).to( f, 5000 );
+	
+	if ( canvas.style.length === 0 )
+	{
+		
+		canvas.className = "firefox_blur";
+		
+	}	
 	
 	opening_sequence.onUpdate( function( ) {
 		
